@@ -1,5 +1,6 @@
 "use strict"
 
-$("#searchInput").keyup(function() {
-
-})
+function filterJobs(){
+	var input = document.getElementById("searchInput").value;
+	alert(input);
+}

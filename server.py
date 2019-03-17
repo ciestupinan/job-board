@@ -1,7 +1,7 @@
 
 from jinja2 import StrictUndefined
 
-from flask import Flask, render_template, request, flash, redirect, session
+from flask import Flask, render_template, request, flash, redirect, session, url_for
 from flask_debugtoolbar import DebugToolbarExtension
 
 from model import connect_to_db, db, Company, Job
@@ -21,14 +21,17 @@ def index():
     return render_template("index.html", jobs=jobs)
 
 
-@app.route('/search/<searchInput>',methods=['GET'])
-def search():
-	search_input = '%' + request.form["searchInput"] + '%'
-	company_results = Job.query.filter_by(Job.commpany_name.like(search_input))
-	job_title_results = Job.query.filter_by(Job.job_title.like(search_input))
-	location_results = Job.query.filter_by(Job.job_location.like(search_input))
+@app.route('/results', methods=['POST'])
+def search_results():
+	form_input = request.form["search"]
+	search = '%' + form_input + '%'
 
-	return render_template("search_results.html",
+	company_results = Job.query.filter(Job.company_name.ilike(search))
+	job_title_results = Job.query.filter(Job.job_title.ilike(search))
+	location_results = Job.query.filter(Job.job_location.ilike(search))
+
+	
+	return render_template("searchresults.html",
 							company_results=company_results,
 							job_title_results=job_title_results,
 							location_results=location_results)

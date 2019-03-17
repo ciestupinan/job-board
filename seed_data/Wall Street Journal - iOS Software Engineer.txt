@@ -1,0 +1,60 @@
+The Wall Street Journal
+iOS Software Engineer
+https://assets.themuse.com/uploaded/companies/365/small_logo.png
+New York City, NY
+https://wsj.jobs/new-york-ny/ios-software-engineer/C15EB39318EA4B31B026809DD6521907/job/?utm_medium=.JOBS%20Universe&utm_campaign=.JOBS%20XML%20Feed&utm_source=.JOBS%20XML%20Feed-DE&vs=23
+
+Job Description:
+
+About Our Team
+
+We are looking for a iOS engineer to help us build and improve the Wall Street Journal app for iPhone and iPad. As a mobile engineer, you'll join our team of developers working together to bring innovative news and storytelling techniques to our mobile platform. Our team consists of iOS, Android, and backend developers working closely with product, design, and the newsroom.
+
+About Our Work
+
+We write all new code in Swift
+We prioritize new iOS features
+Use use Git for source control
+We use Git Flow for building features
+We code review all pull requests
+We use continuous integration, with automatically deployed builds, internally and submitted to Apple
+We write tests for new code
+We work closely with product, design, and the newsroom
+We are continually adapting and refining our process
+
+Requirements
+At least one year of iOS development experience
+Experience with Swift or Objective-C (preferably both)
+A Bachelor of Computer Science (or equivalent experience)
+Fluency with object-oriented programming and model-view-controller architecture
+Experience with Xcode and performance profiling with Instruments
+Familiarity with Apple's Human Interface Guidelines
+
+Nice to Have
+Experience accessing an API, e.g., JSON or XML and displaying the downloaded content natively in an iOS app
+Fluency with Scripting Languages, such as Bash, Ruby, and JavaScript
+Familiarity with HTML & CSS
+Node.js or other non-native app development experience
+Experience with templating languages and grid-based layouts
+Experience with the software development life-cycle, especially Agile and Scrum
+An online technical presence, e.g., GitHub or technical writing
+
+About the Wall Street Journal
+
+The Wall Street Journal is a global news organization that provides leading news, information, commentary and analysis. It is America's largest newspaper by total average circulation with more than 2.3 million digital and print subscribers and 36 million global digital visitors per month. Building on its heritage as the preeminent source of global business and financial news, the Journal includes coverage of U.S. & world news, politics, arts, culture, lifestyle, sports, and health. It holds 36 Pulitzer Prizes for outstanding journalism. The Wall Street Journal is published by Dow Jones, a division of News Corp. The Wall Street Journal iOS app has millions of users, and has been repeatedly featured by Apple.
+
+Dow Jones , Making Careers Newsworthy
+
+All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, national origin, protected veteran status, or disability status. EEO/AA/M/F/Disabled/Vets .
+
+Dow Jones is committed to providing reasonable accommodation for qualified individuals with disabilities, in our job application and/or interview process. If you need assistance or accommodation in completing your application, due to a disability, please reach out to us at TalentResourceTeam@dowjones.com . Please put "Reasonable Accommodation" in the subject line.
+
+Business Area: NEWS/WSJ
+
+Job Category: IT Development Group
+
+About Us
+
+Dow Jones is a global provider of news and business information, delivering content to consumers and organizations around the world across multiple formats, including print, digital, mobile and live events. Dow Jones has produced unrivaled quality content for more than 125 years and today has one of the world's largest news gathering operations globally. It produces leading publications and products including the flagship Wall Street Journal, America's largest newspaper by paid circulation; Factiva, Barron's, MarketWatch, Financial News, DJX, Dow Jones Risk & Compliance, Dow Jones Newswires, and Dow Jones VentureSource.Dow Jones is a division of News Corp (NASDAQ: NWS, NWSA; ASX: NWS, NWSLV).
+
+Req ID: 15461

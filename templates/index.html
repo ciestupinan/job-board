@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    <script src="static/js/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="static/css/bootstrap.css">
+    <link rel="stylesheet" href="static/css/stylesheet.css">
+
+
+  	<title>Job Site</title>
+  </head>
+
+  <body>
+  
+
+    <div class="container">
+        <div class="row">
+        	<div class="col-3">
+    		</div>
+            <div class="col-6">
+            	<div class="intro">
+            		<h1>Start Browsing for Jobs</h1>
+            		<input class="form-control" id="searchInput" type="search" onsearch="filterJobs()" placeholder="Search by Job, Company, or Location" aria-label="Search">
+
+            	</div>
+            </div>
+            <div class="col-3"></div>
+	    </div>
+
+	    <div class="row">
+        	<div class="col-3">
+    		</div>
+            <div class="col-6">
+            	<div id="searchResults">
+            	</div>
+            </div>
+            <div class="col-3"></div>
+	    </div>
+        
+        {% for job in jobs %}
+  		<div class="row">
+  			<div class="col-md-2"></div>
+        	<div class="col-md-8">
+        		<div class="job">
+        			<div class="row">
+	        			<div class="col-10">
+	        				<img class="logo" src="{{ job.company.company_logo }}">
+			            	<h3>{{ job.job_title }}</h3>
+			            	<h4 class="job_location">
+			            		<div id="company">{{job.company_name}} &middot;&nbsp;</div>
+			            		<div id="local">{{ job.job_location }}</div>
+			            	</h4>
+	        			</div>
+	        			<div class="col-2" id="apply-col">
+	        				<a class="apply-button" href="{{ job.job_link }}">Apply</a>
+	        			</div>
+
+	        		</div>
+	            	<hr>
+		  			
+			  		<div class="job-description">
+			  			{{job.job_description|safe}}
+		
+			  		</div>
+			  	</div>
+        	</div>
+        	<div class="col-md-2"></div>
+        </div>
+  		{% endfor %}
+ 
+    </div>            
+
+  	
+    <script src="static/js/jobs.js"></script>
+	</body>
+</html>

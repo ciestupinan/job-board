@@ -1,0 +1,40 @@
+Outdoor Voices
+Front End Engineer
+https://assets.themuse.com/uploaded/companies/738/small_logo.png
+Austin, TX
+https://jobs.lever.co/outdoorvoices/6d5de52a-3901-4eba-b987-6d1eefa331b2/apply?lever-source=themuse
+
+We are looking for a Front End Engineer to join our technology team and make our digital experiences best-in-class as we build out the next great activewear brand together. The right candidate is a versatile engineer, able to jump into a team environment, and make an immediate impact while also being able to autonomously lead initiatives and drive them to completion. S/he has the ability to work across desktop and mobile, and have the attention to detail to create incredible digital user experiences.
+
+Responsibilities:
+Ship beautiful and functional products for our customers
+Focus primarily on our eCommerce website
+Independently own feature delivery through completion
+Work directly with a design/creative team to build out experiences that differentiate OV from competitors in our space.
+Improve code quality and engineering best practices
+Work cross-functionally across business to deliver best in class experiences
+Work within an existing codebase, identify areas for improvement, and implement those improvements.
+Lead initiatives and report out status 
+
+Qualifications:
+Bachelor's degree in CS or a related technical field
+4+ years of software development experience
+Experience with React/React Native and Javascript
+Understanding of software development life cycles to lead by example in planning and estimating out tasks for projects
+Excited about Progressive Web Apps
+Knowledge of automation/deployment best practices, and capable of building out a continuous deployment workflow
+Agile and excited to work in a start-up environment
+Ability to break down and estimate complex problems
+Ability to deliver high quality projects end to end, getting completed projects across the finish line
+Familiar with building, launching, and supporting products that are used globally
+A testing mindset and familiarity with testing strategies
+Python &/or Django experience a plus
+
+
+Compensation & Benefits:
+Competitive compensation package
+OV Benefits include flexible vacation, 75% of health care premiums, dental and vision
+The latest OV gear and—of course—Recreation 
+
+About Outdoor Voices:
+We believe in Doing Things — moving your body and having fun with friends. From dog jogs to dodgeball, we make clothes for sweating without the added pressure. Our team is made up of casual Recreationalists who approach activity with ease, humor, and delight. Since launching in 2014, Outdoor Voices has been featured in The New York Times, Vogue, Wall Street Journal, GQ, Forbes and Fast Co.

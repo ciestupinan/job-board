@@ -1,0 +1,46 @@
+
+body {
+    margin:100px 0;
+}
+.intro {
+    text-align:center;
+    margin: 100px 0;
+}
+
+.logo {
+    max-width: 100px;
+}
+
+#apply-col {
+    margin:auto;
+}
+
+a.apply-button {
+    float:right;
+    padding: 10px;
+    color: white;
+    background: #188FFB;
+    border-radius: 12px;
+    border-color: #188FFB;
+    border:solid;
+    
+}
+
+.job{
+    margin-top:10px;
+    padding: 20px 40px;
+    border-color: black;
+    border:solid;
+    border-width: 1px;
+    background-color:white;
+}
+
+#company {
+    color:#343a40;
+    float:left;
+}
+
+#local {
+    color:#868e96;
+
+}

@@ -25,9 +25,10 @@ a.apply-button {
     border:solid;
 }
 
-a.all-jobs-button {
-    margin:auto;
+a.apply-button:hover {
+    text-decoration: none;
 }
+
 
 .job{
     margin-top:10px;

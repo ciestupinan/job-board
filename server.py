@@ -30,11 +30,21 @@ def search_results():
 	job_title_results = Job.query.filter(Job.job_title.ilike(search))
 	location_results = Job.query.filter(Job.job_location.ilike(search))
 
+	isNone = False 
+	total_results = len(company_results.all()) + len(job_title_results.all()) + len(location_results.all())
+	
+	if total_results == 0:
+		isNone = True
+
+
+
 	
 	return render_template("searchresults.html",
 							company_results=company_results,
 							job_title_results=job_title_results,
-							location_results=location_results)
+							location_results=location_results,
+							isNone=isNone,
+							total_results=total_results)
 
 
 if __name__ == "__main__":

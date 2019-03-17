@@ -2,8 +2,24 @@
 {% block content %}
 
 <div class="row">
+
+  {% if isNone %}
+  <div class="col-md-3"></div>
+  <div class="col-md-6 no-results">
+    <h4>Sorry, we couldn't find anything that matched your search.</h4>
+    <h4>Try searching for something else or <a id="noresults" href="/">view all jobs</a>.</h4>
+  </div>
+  <div class="col-md-3"></div>
+    
+
+  {% else %}
   <div class="col-md-2"></div>
     <div class="col-md-8">
+      {% if total_results == 1 %}
+      <h5>We found 1 job listing. | <a id="view-all" href="/">View All</a></h5>
+      {% else %}
+      <h5>We found {{ total_results }} job listings. | <a id="view-all" href="/">View All</a></h5>
+      {% endif %}
       <div id="accordion">
     
         {% for job in company_results %}
@@ -111,6 +127,7 @@
         {% endfor %}
       </div>
 
+      {% endif %}
     </div>
   <div class="col-md-2"></div>
 </div>

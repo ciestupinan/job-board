@@ -43,6 +43,8 @@ class Job(db.Model):
                    title={self.job_title}>"""
 
 
+
+
 #####################################################################
 # Helper functions
 

@@ -7,6 +7,18 @@ body {
     margin: 100px 0;
 }
 
+#accordion .card {
+    margin:15px 0;
+}
+
+#accordion .card-header {
+    background-color: white;
+}
+
+#accordion .card-body {
+    background-color: #fbfbfb;
+}
+
 .logo {
     max-width: 100px;
 }

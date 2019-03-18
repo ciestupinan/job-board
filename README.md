@@ -7,7 +7,6 @@
 
 Build a web app that allows users to learn information about a job and links them to be able to apply when they’re interested.
  
-Must Haves:
 
 * Ensure you that it contains at least the following fields:
 	* Company name
@@ -19,7 +18,8 @@ Must Haves:
 * Create APIs to pull data from the database
 * Web frontend should call the appropriate APIs to get the proper data for a given job and display it to a user
 
-Nice to have:
+
+
 * There is no specific design to develop towards - just create something you find clean and attractive that you would like to use. Feel free to take inspiration from design elements within the Muse or, if you prefer, to show off if this is an area in which you shine
 * You’re welcome to use whatever technologies with which you feel most comfortable showing off your best work. If you’re curious what we work most with, our standard stack is Python/Django, React, and Postgres
 * You may also include other information, 3rd party embeds (i.e. Twitter feed, Facebook timeline, YouTube video), etc. you think would be useful and relevant to the user. Feel free to experiment and show off

@@ -1,6 +1,8 @@
 # The Muse Coding Challenge #
 #### 19 March 2019 ####
 
+![https://media.giphy.com/media/2njsPW20xdovXTpcNu/giphy.gif]
+
 ## Prompt ##
 
 Build a web app that allows users to learn information about a job and links them to be able to apply when they’re interested.

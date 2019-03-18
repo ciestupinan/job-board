@@ -27,17 +27,14 @@ def search_results():
 	search = '%' + form_input + '%'
 
 	company_results = Job.query.filter(Job.company_name.ilike(search))
-	job_title_results = Job.query.filter(Job.job_title.ilike(search))
-	location_results = Job.query.filter(Job.job_location.ilike(search))
+	job_title_results = Job.query.filter(Job.job_title.ilike(search),~Job.company_name.ilike(search))
+	location_results = Job.query.filter(Job.job_location.ilike(search),~Job.company_name.ilike(search),~Job.job_title.ilike(search))
 
 	isNone = False 
 	total_results = len(company_results.all()) + len(job_title_results.all()) + len(location_results.all())
 	
 	if total_results == 0:
 		isNone = True
-
-
-
 	
 	return render_template("searchresults.html",
 							company_results=company_results,

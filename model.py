@@ -1,7 +1,9 @@
 
 from flask_sqlalchemy import SQLAlchemy
 
+
 db = SQLAlchemy()
+
 
 
 #####################################################################
@@ -15,8 +17,8 @@ class Company(db.Model):
     company_name = db.Column(db.String(), nullable=False, primary_key=True)
     company_logo = db.Column(db.String(), nullable=True)
 
+    
     def __repr__(self):
-
         return f"<Company name={self.name}>"
 
 
@@ -34,13 +36,16 @@ class Job(db.Model):
 
     company = db.relationship("Company",
                               backref=db.backref("jobs",
-                                                order_by=company_name))
+                              order_by=company_name))
+
+    
 
     def __repr__(self):
 
         return f"""<Job job_id={self.job_id} 
                    company_name={self.company_name} 
                    title={self.job_title}>"""
+
 
 
 

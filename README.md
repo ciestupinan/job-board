@@ -1,5 +1,5 @@
 # The Muse Coding Challenge #
-### 19 March 2019 ###
+#### 19 March 2019 ####
 
 ## Prompt ##
 
@@ -26,12 +26,22 @@ Nice to have:
 
 These are instructions assuming you have Python3 installed on your machine. It is recommended that you use Google Chrome as your browser.
 1. Create virtualenv
+
 ```$ virtualenv env```
+
 2. Install requirements
-```pip3 install -r requirements.txt```
+
+```$ pip3 install -r requirements.txt```
+
 3. Create jobs database and seed it with seed data provided
+
 ```$ createdb jobs
 $ python3 model.py
-$ python3 seed.py```
+$ python3 seed.py
+```
+
 4. Run server.py. In the terminal, it will tell you the address where the server is running. Visit that address in a browser. I recommend using incognito mode with Google Chrome.
+
 ```$ python3 server.py```
+
+## Resources ##

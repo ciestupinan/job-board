@@ -1,7 +1,7 @@
 # The Muse Coding Challenge #
 #### 19 March 2019 ####
 
-![https://media.giphy.com/media/2njsPW20xdovXTpcNu/giphy.gif]
+![gif](https://media.giphy.com/media/2njsPW20xdovXTpcNu/giphy.gif)
 
 ## Prompt ##
 

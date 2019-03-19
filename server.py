@@ -1,13 +1,12 @@
 
 from jinja2 import StrictUndefined
-
-from flask import Flask, render_template, request, flash, redirect, session, url_for
+from flask import Flask, render_template, request, flash, redirect, session, jsonify
 from flask_debugtoolbar import DebugToolbarExtension
 
-from model import connect_to_db, db, Company, Job
+from model import connect_to_db, db, Company, Job, app, company_schema, companies_schema, jobs_schema, job_schema
 
 
-app = Flask(__name__)
+
 
 # Required to use Flask sessions and the debug toolbar
 app.secret_key = "kjhdsf8234"
@@ -44,8 +43,45 @@ def search_results():
 							total_results=total_results)
 
 
+
+
+# endpoint to show all companies
+@app.route('/company', methods=['GET'])
+def get_companies():
+	companies = Company.query.all()
+	result = companies_schema.dump(companies)
+	return jsonify(result.data)
+
+# endpoint to show all jobs
+@app.route('/jobs', methods=['GET'])
+def get_jobs():
+
+	result = db.session.query(Job.id, Company.name, Job.company_id, Job.title, Job.location, Job.description, Job.link).join(Company).all()
+	
+	return jobs_schema.jsonify(result)
+
+# endpoint to show all jobs at company
+@app.route('/company/<id>', methods=["GET"])
+def get_jobs_at_company(id):
+	result = Job.query.filter(Job.company_id == id).all()
+	return jobs_schema.jsonify(result)
+
+# endpoint to show all jobs in location
+@app.route('/jobs/<location>', methods=["GET"])
+def get_jobs_at_location(location):
+	result = Job.query.filter(Job.location == location)
+	return jobs_schema.jsonify(result)
+
+# endpoint to show all jobs with keywords in title
+@app.route('/jobs/<keywords>',methods=["GET"])
+def get_jobs_with_keywords(keywords):
+	result = Job.query.filter(Job.title.ilike(keywords))
+	return jobs_schema.jsonify(result)
+
+
+
 if __name__ == "__main__":
-    app.debug = False
+    app.debug = True
 
     connect_to_db(app)
 

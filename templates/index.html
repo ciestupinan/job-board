@@ -11,30 +11,30 @@
 				{% for job in jobs %}
 				
 				<div class="card">
-					<div class="card-header" id="{{job.job_id}}" data-toggle="collapse" data-target="#test{{job.job_id}}">
+					<div class="card-header" id="{{job.id}}" data-toggle="collapse" data-target="#test{{job.id}}">
 
 
 							<div class="row">
 								<div class="col-10">
-									<img class="logo" src="{{ job.company.company_logo }}">
-									<h3>{{ job.job_title }}</h3>
+									<img class="logo" src="{{ job.company.logo }}">
+									<h3>{{ job.title }}</h3>
 									<h4 class="job_location">
-										<div id="company">{{job.company_name}} &middot;&nbsp;</div>
-										<div id="local">{{ job.job_location }}</div>
+										<div id="company">{{job.company.name}} &middot;&nbsp;</div>
+										<div id="local">{{ job.location }}</div>
 									</h4>
 								</div>
 								<div class="col-2" id="apply-col">
-									<a class="apply-button" href="{{ job.job_link }}">Apply</a>
+									<a class="apply-button" href="{{ job.link }}">Apply</a>
 								</div>
 							</div>
 
 
 					</div>
 
-					<div id="test{{job.job_id}}" class="collapse" aria-labelledby="{{job.job_id}}" data-parent="#accordion">
+					<div id="test{{job.id}}" class="collapse" aria-labelledby="{{job.id}}" data-parent="#accordion">
 						<div class="card-body">
 							<div class="job-description">
-								{{job.job_description|safe}}
+								{{job.description|safe}}
 							</div>
 						</div>
 					</div>

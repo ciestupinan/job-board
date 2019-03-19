@@ -13,28 +13,29 @@ def load_data(file_list):
 	for job_file in file_list:
 		with open(job_file) as file:
 			f = file.readlines()
-			company_name = f[0].strip('\n')
+			name = f[0].strip('\n')
 			job_title = f[1].strip('\n')
-			company_logo = f[2].strip('\n')
+			logo = f[2].strip('\n')
 			job_location = f[3].strip('\n')
 			job_link = f[4].strip('\n')
 			jd = f[6:]
 			job_description = ('').join(jd).replace('\n','<br>')
 
-			company_exists = db.session.query(db.exists().where(Company.company_name == company_name)).scalar()
+			company_exists = db.session.query(db.exists().where(Company.name == name)).scalar()
 			if not company_exists:
 
-				company = Company(company_name=company_name,
-								  company_logo=company_logo)
+				company = Company(name=name, logo=logo)
 
 				db.session.add(company)
 				db.session.commit()
 
-			job = Job(job_title=job_title,
-					  company_name=company_name,
-					  job_description=job_description,
-					  job_location=job_location,
-					  job_link=job_link)
+			company_id = db.session.query(Company.id).filter(Company.name == name)
+
+			job = Job(title=job_title,
+					  company_id=company_id,
+					  description=job_description,
+					  location=job_location,
+					  link=job_link)
 
 			db.session.add(job)
 
@@ -42,16 +43,28 @@ def load_data(file_list):
 
 
 
+def set_val_company_id():
+    """Set value for the next company id after seeding database"""
 
-def set_val_job_id():
-    """Set value for the next job_id after seeding database"""
-
-    # Get the Max job_id in the database
-    result = db.session.query(func.max(Job.job_id)).one()
+    # Get the Max company id in the database
+    result = db.session.query(func.max(Company.id)).one()
     max_id = int(result[0])
 
-    # Set the value for the next job_id to be max_id + 1
-    query = "SELECT setval('jobs_job_id_seq', :new_id)"
+    # Set the value for the next company id to be max_id + 1
+    query = "SELECT setval('companies_id_seq', :new_id)"
+    db.session.execute(query, {'new_id': max_id + 1})
+    db.session.commit()
+
+
+def set_val_job_id():
+    """Set value for the next job id after seeding database"""
+
+    # Get the Max job id in the database
+    result = db.session.query(func.max(Job.id)).one()
+    max_id = int(result[0])
+
+    # Set the value for the next job id to be max_id + 1
+    query = "SELECT setval('jobs_id_seq', :new_id)"
     db.session.execute(query, {'new_id': max_id + 1})
     db.session.commit()
 
@@ -66,6 +79,6 @@ if __name__ == "__main__":
 		"seed_data/Wall Street Journal - iOS Software Engineer.txt",
 		"seed_data/Wayfair - Product Manager, Mobile Apps.txt"])
 
-
+	set_val_company_id()
 	set_val_job_id()
 

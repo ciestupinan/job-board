@@ -1,5 +1,5 @@
 # Job search portal #
-### My personal job portal to help me look for awesome positions###
+### My personal job portal to help me look for awesome positions ###
 #### March 2019 ####
 
 ![gif](https://media.giphy.com/media/2njsPW20xdovXTpcNu/giphy.gif)
